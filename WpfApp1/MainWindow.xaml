@@ -1,0 +1,57 @@
+﻿<Window x:Class="HardwareTableExample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Hardware Table" Height="450" Width="600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Margin="10">
+            <TextBlock Text="Введите данные о 3 компьютерах:" FontWeight="Bold" Margin="0, 0, 0, 10"/>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Процессор:" Width="100" />
+                <TextBox x:Name="Processor1" Width="150" Margin="5, 0, 5, 0" />
+                <TextBox x:Name="Processor2" Width="150" Margin="5, 0, 5, 0" />
+                <TextBox x:Name="Processor3" Width="150" Margin="5, 0, 5, 0" />
+                <TextBox x:Name="Processor4" Width="150" Margin="5, 0, 5, 0" />
+                <TextBox x:Name="Processor5" Width="150" Margin="5, 0, 5, 0" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Память (ГБ):" Width="100" />
+                <TextBox x:Name="RAM1" Width="150" Margin="5, 0, 5, 0" />
+                <TextBox x:Name="RAM2" Width="150" Margin="5, 0, 5, 0" />
+                <TextBox x:Name="RAM3" Width="150" Margin="5, 0, 5, 0" />
+                <TextBox x:Name="RAM4" Width="150" Margin="5, 0, 5, 0" />
+                <TextBox x:Name="RAM5" Width="150" Margin="5, 0, 5, 0" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="HDD (ГБ):" Width="100" />
+                <TextBox x:Name="HDD1" Width="150" Margin="5, 0, 5, 0" />
+                <TextBox x:Name="HDD2" Width="150" Margin="5, 0, 5, 0" />
+                <TextBox x:Name="HDD3" Width="150" Margin="5, 0, 5, 0" />
+                <TextBox x:Name="HDD4" Width="150" Margin="5, 0, 5, 0" />
+                <TextBox x:Name="HDD5" Width="150" Margin="5, 0, 5, 0" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Видеокарта:" Width="100" />
+                <TextBox x:Name="Video1" Width="150" Margin="5, 0, 5, 0" />
+                <TextBox x:Name="Video2" Width="150" Margin="5, 0, 5, 0" />
+                <TextBox x:Name="Video3" Width="150" Margin="5, 0, 5, 0" />
+                <TextBox x:Name="Video4" Width="150" Margin="5, 0, 5, 0" />
+                <TextBox x:Name="Video5" Width="150" Margin="5, 0, 5, 0" />
+            </StackPanel>
+
+            <Button Content="Показать Результаты" Click="ShowResultsButton_Click" Margin="0,10,0,0"/>
+        </StackPanel>
+
+        <DataGrid x:Name="HardwareDataGrid" AutoGenerateColumns="True" Grid.Row="1" Margin="10"/>
+        <Label x:Name="AverageRAMLabel" Grid.Row="2" HorizontalAlignment="Center" Margin="10" FontSize="14"/>
+    </Grid>
+</Window>
